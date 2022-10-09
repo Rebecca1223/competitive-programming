@@ -1,2 +1,2 @@
-# Leetcode-contributions
-Collection of LeetCode questions to ace the coding interview! - Created using [LeetHub](https://github.com/QasimWani/LeetHub)
+# CP
+Preparations for cp questions
