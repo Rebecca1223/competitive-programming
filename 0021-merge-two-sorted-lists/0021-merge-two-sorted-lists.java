@@ -36,12 +36,8 @@ class Solution {
                 }
                 prev = list2;
                 list2 = temp;
-            } else {
-                if (prev == null) {
-                    prev = list1;
-                } else {
-                    prev = prev.next;
-                }
+            } else { 
+                prev = list1;
                 list1 = list1.next;
             }
         }
