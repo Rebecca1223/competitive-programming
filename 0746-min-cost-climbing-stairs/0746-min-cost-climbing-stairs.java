@@ -16,7 +16,6 @@ class Solution {
         accum[2] = cost[2] + Math.min(accum[1], accum[0] + accum[2]);
         
         for (int i = 3; i < len; i++) {
-            System.out.println (accum[i-3] + " " + accum[i-2] + " " + accum[i-1]);
             accum[i] = cost[i] + Math.min(accum[i-2], accum[i-1]);
         }
         
