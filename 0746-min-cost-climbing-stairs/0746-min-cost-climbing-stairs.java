@@ -3,7 +3,7 @@ import java.lang.*;
 class Solution {
     public int minCostClimbingStairs(int[] cost) {
         int len = cost.length;
-        int accum[] = new int[len + 1];
+        int dp[] = new int[len + 1];
         
         if (len == 2) {
             return Math.min(cost[0], cost[1]);
@@ -11,14 +11,14 @@ class Solution {
             return Math.min(cost[0] + cost[2], cost[1]);
         }
         
-        accum[0] = cost[0];
-        accum[1] = cost[1];
-        accum[2] = cost[2] + Math.min(accum[1], accum[0] + accum[2]);
+        dp[0] = cost[0];
+        dp[1] = cost[1];
+        dp[2] = cost[2] + Math.min(dp[1], dp[0] + dp[2]);
         
         for (int i = 3; i < len; i++) {
-            accum[i] = cost[i] + Math.min(accum[i-2], accum[i-1]);
+            dp[i] = cost[i] + Math.min(dp[i-2], dp[i-1]);
         }
         
-        return Math.min(accum[len - 2], cost[len-1] + accum[len - 3]);
+        return Math.min(dp[len - 2], cost[len-1] + dp[len - 3]);
     }
 }
