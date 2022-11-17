@@ -9,13 +9,11 @@ class Solution {
             } else {
                 freq.put(nums[i], 1);
             }
-        }
-        
-        for (int i : freq.keySet()) {
-            if (freq.get(i) > numf) {
-                numf = freq.get(i);
-                num = i;
-            }
+            
+            if (freq.get(nums[i]) > numf) {
+                numf = freq.get(nums[i]);
+                num = nums[i];
+            } 
         }
         
         return num;
