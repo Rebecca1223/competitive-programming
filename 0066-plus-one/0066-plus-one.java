@@ -13,11 +13,7 @@ class Solution {
             
             if (carry == len) {
                 int[] big = new int [digits.length + 1];
-                for (int i = 0; i < len - carry; i++) {
-                    big[i] = digits[i];
-                }
-
-                big[big.length - carry - 1]++;
+                big[0] = 1;
                 return big; 
             } else {
                 digits[digits.length - carry - 1]++;
