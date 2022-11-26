@@ -9,13 +9,9 @@ class Solution {
             
             if (height[left] < height[right]) {
                 left++;
-            } else if (height[right] < height[left]) {
-                right--;
             } else {
-                left++;
                 right--;
-            }
-                
+            }   
         }
         
         return area;
