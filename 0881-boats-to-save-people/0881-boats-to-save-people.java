@@ -6,14 +6,9 @@ class Solution {
         Arrays.sort(people);
         
         while (left <= right) {
-            if (people[right] + people[left] <= limit) {
-                boat++;
-                right--;
-                left++;
-            } else {
-                boat++;
-                right--;
-            }
+            if (people[right] + people[left] <= limit) left++;
+            right--;
+            boat++;
         }
         
         return boat;
