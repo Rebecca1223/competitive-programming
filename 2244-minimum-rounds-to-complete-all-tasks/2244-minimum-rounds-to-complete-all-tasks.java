@@ -2,10 +2,10 @@ class Solution {
     public int minimumRounds(int[] tasks) {
         HashMap<Integer, Integer> freq = new HashMap<Integer, Integer>();
         for (int i = 0; i < tasks.length; i++) {
-            if (!freq.containsKey(tasks[i])) {
-                freq.put(tasks[i], 1);
-            } else {
+            if (freq.containsKey(tasks[i])) {
                 freq.put(tasks[i], freq.get(tasks[i]) + 1);
+            } else {
+                freq.put(tasks[i], 1);
             }
         }
         
