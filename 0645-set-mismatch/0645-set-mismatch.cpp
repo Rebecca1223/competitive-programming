@@ -13,7 +13,10 @@ public:
         }
         
         for (int i = 1; i <= nums.size(); i++) {
-            if (seen.count(i) < 1) output.push_back(i);
+            if (seen.count(i) < 1) {
+                output.push_back(i);
+                break;
+            }
         }
         
         return output;
