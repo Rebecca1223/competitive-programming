@@ -20,17 +20,13 @@ public:
                 right++;
             }
             
-            // cout << "prev: " << prev << endl;
             if (right == height.size()-1 && height[right] < prev && prevI != left+1) right = prevI;
             
             int low = min(height[left], height[right]);
-            // cout << left << " " << right << " | ";
             for (int i = left+1; i < right; i++) {
                 int diff = low - height[i];
                 if (diff > 0) area += low - height[i];
-                // cout << diff << " ";
             }
-            // cout << endl;
             
             left = right;
         }
