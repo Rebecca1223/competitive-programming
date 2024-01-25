@@ -1,2 +1,2 @@
-# CP
-Preparations for cp questions
+# Competitive Programming
+Some some Leetcode grinding here~
