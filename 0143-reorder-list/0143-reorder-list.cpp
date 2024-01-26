@@ -28,17 +28,11 @@ public:
         while (len > 0) {
             current->next = reversed.back();
             current = current->next;
-            reversed.pop_back();
-            len--;
-            
-            if (len < 1) break;
-            
+            reversed.pop_back();          
             current->next = original;
             original = original->next;
             current = current->next;
-            len--;
-            
-            if (len < 1) break;
+            len-=2;
         }
         current->next = nullptr;
     }
