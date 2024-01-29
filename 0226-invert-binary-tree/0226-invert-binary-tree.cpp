@@ -11,19 +11,15 @@
  */
 class Solution {
 public:
-    void recurse(TreeNode* root) {
-        if (!root) return;
+    TreeNode* invertTree(TreeNode* root) {
+        if (!root) return nullptr;
        
         TreeNode* temp = root->left;
         root->left = root->right;
         root->right = temp;
         
-        recurse(root->left);
-        recurse(root->right);
-    }
-    
-    TreeNode* invertTree(TreeNode* root) {
-        recurse(root);
+        invertTree(root->left);
+        invertTree(root->right);
         
         return root;
     }
