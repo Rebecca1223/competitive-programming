@@ -3,9 +3,6 @@ class Solution:
         if target == arr:
             return True
         
-        if len(target) != len(arr):
-            return False
-        
         targetMap = {}
         
         for i in range(len(target)):
